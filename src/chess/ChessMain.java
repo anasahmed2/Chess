@@ -6,7 +6,7 @@ public class ChessMain {
     public static void main(String[] args) {
         Game game = new Game();
         System.out.println("Intial Board:");
-        game.getBoard().printBoard()
+        game.getBoard().printBoard();
 
         Move m1 = new Move(new Position(6, 4), new Position(4, 4));
         boolean ok1 = game.makeMove(m1);

@@ -3,13 +3,13 @@ package chess;
 import java.util.ArrayList;
 import java.util.List;
 
-public class King extends Peice {
+public class King extends Piece {
 
     public King(Color color) {
         super(color);
     }
 
-    @override
+    @Override
     public List<Move> getPotentialMoves(Board board) {
         List<Move> res = new ArrayList<>();
         int[] dr = {-1,-1,-1,0,0,1,1,1};
@@ -23,14 +23,14 @@ public class King extends Peice {
         return res;
     }
 
-    @override
+    @Override
     public Piece copy() {
         King k = new King(color);
         k.setHasMoved(hasMoved);
         return k;
     }
 
-    @override
+    @Override
     public char getSymbol() {
         if (color == Color.WHITE) {
             return 'K';
